@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>kendoui.dataviz.2013.1.514.commercial</id>
+    <version>1.0.0</version>
+    <title>Kendo UI DataViz</title>
+    <authors>Craig.Williams</authors>
+    <owners>Acutest</owners>
+    <licenseUrl>http://www.kendoui.com/faq/licensing.aspx</licenseUrl>
+    <projectUrl>http://www.kendoui.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Kendo UI DataViz is a set of HTML5 widgets built on jQuery. Including powerful chart controls.</description>
+    <summary>Kendo UI DataViz is a set of HTML5 widgets built on jQuery. Including powerful chart controls.</summary>
+    <copyright>Acute Sales Ltd</copyright>
+    <language>en-GB</language>
+    <tags>Kendo UI</tags>
+    <dependencies>
+      <dependency id="jQuery" version="1.9.1" />
+    </dependencies>
+  </metadata>
+</package>

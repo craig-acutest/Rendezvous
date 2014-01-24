@@ -1,0 +1,38 @@
+/* ------------------------------------------------ RESPONSIVE ------------------------------------------------ */
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+}
+
+img.noresponsive {
+    max-width: 0;
+}
+
+/* MIN WIDTHS */
+@media (min-width: 768px) {
+    .pull-left-sm {float: left;}
+    .pull-right-sm {float: right;}
+}
+@media (min-width: 992px) {
+    .pull-left-md {float: left;}
+    .pull-right-md {float: right;}
+}
+@media (min-width: 1200px) {
+    .container {width: 970px;}
+}
+
+/* MAX WIDTHS */
+@media (max-width: 992px) {
+    .lang {top: -50px;right: -10px;}
+    .lang li a {color: #5E5E5E}
+    .lang li a:hover, .lang li a.active {color: #000}
+}
+@media (max-width: 768px) {
+    #header .contact {top: 0; margin-bottom: 0; width: 100%;}
+    table.responsive-sm td {width: 100% !important; display: block; clear: both;padding: 15px;}
+}
+@media (max-width: 468px) {
+    .hidden-xxs, tr.hidden-xxs, th.hidden-xxs, td.hidden-xxs {
+        display: none!important;
+    }
+    .col-xxs-12 {width: 100%}
+    table.responsive-xs td {width: 100%; display: block; clear: both}
+}
