@@ -57,11 +57,16 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.SignalR.Core">
-      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.0.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.3.1.3.3\lib\net35\EPPlus.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
-      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.0.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.0.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.0.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -169,6 +174,9 @@
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
+    <Reference Include="Utilities.DataTypes">
+      <HintPath>..\packages\CraigsUtilityLibrary-DataTypes.3.4.0080\lib\net40\Utilities.DataTypes.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -202,6 +210,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -348,25 +357,157 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\backgrounds.png" />
+    <Content Include="img\bg-box1.png" />
+    <Content Include="img\bg-box2.png" />
+    <Content Include="img\bg-btn.png" />
+    <Content Include="img\bg-footer.jpg" />
+    <Content Include="img\bg-menu-separator.png" />
+    <Content Include="img\bg-menu.png" />
+    <Content Include="img\bg-slider.jpg" />
+    <Content Include="img\bg-title.png" />
+    <Content Include="img\bg-top.jpg" />
+    <Content Include="img\bg-topbk.jpg" />
+    <Content Include="img\bg-toporig.jpg" />
+    <Content Include="img\box-top.jpg" />
+    <Content Include="img\checkbox.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\filters.svg" />
+    <Content Include="img\footer-separator.png" />
+    <Content Include="img\gallery\01.jpg" />
+    <Content Include="img\gallery\02.jpg" />
+    <Content Include="img\gallery\03.jpg" />
+    <Content Include="img\gallery\04.jpg" />
+    <Content Include="img\gallery\05.jpg" />
+    <Content Include="img\gallery\06.jpg" />
+    <Content Include="img\gallery\07.jpg" />
+    <Content Include="img\gallery\08.jpg" />
+    <Content Include="img\gallery\09.jpg" />
+    <Content Include="img\gallery\10.jpg" />
+    <Content Include="img\gallery\11.jpg" />
+    <Content Include="img\gallery\12.jpg" />
+    <Content Include="img\gallery\13.jpg" />
+    <Content Include="img\gallery\14.jpg" />
+    <Content Include="img\gallery\15.jpg" />
+    <Content Include="img\gallery\16.jpg" />
+    <Content Include="img\gallery\17.jpg" />
+    <Content Include="img\gallery\18.jpg" />
+    <Content Include="img\gallery\19.jpg" />
+    <Content Include="img\gallery\20.jpg" />
+    <Content Include="img\gallery\21.jpg" />
+    <Content Include="img\gallery\21.png" />
+    <Content Include="img\gallery\22.jpg" />
+    <Content Include="img\gallery\banner-blog.jpg" />
+    <Content Include="img\gallery\banner-contact.jpg" />
+    <Content Include="img\gallery\banner-portfolio.jpg" />
+    <Content Include="img\gallery\banner-pricing.jpg" />
+    <Content Include="img\gallery\banner-services.jpg" />
+    <Content Include="img\gallery\banner1.jpg" />
+    <Content Include="img\gallery\banner2.jpg" />
+    <Content Include="img\gallery\banner3.png" />
+    <Content Include="img\gallery\iphones.png" />
+    <Content Include="img\gallery\logos\01.jpg" />
+    <Content Include="img\gallery\logos\01.png" />
+    <Content Include="img\gallery\logos\02.jpg" />
+    <Content Include="img\gallery\logos\02.png" />
+    <Content Include="img\gallery\logos\03.jpg" />
+    <Content Include="img\gallery\logos\03.png" />
+    <Content Include="img\gallery\logos\04.jpg" />
+    <Content Include="img\gallery\logos\04.png" />
+    <Content Include="img\gallery\logos\05.jpg" />
+    <Content Include="img\gallery\logos\05.png" />
+    <Content Include="img\gallery\work.jpg" />
+    <Content Include="img\icons\01.png" />
+    <Content Include="img\icons\02.png" />
+    <Content Include="img\icons\03.png" />
+    <Content Include="img\icons\04.png" />
+    <Content Include="img\icons\05.png" />
+    <Content Include="img\icons\06.png" />
+    <Content Include="img\icons\address.png" />
+    <Content Include="img\icons\bullet1.png" />
+    <Content Include="img\icons\bullet2.png" />
+    <Content Include="img\icons\bullet3.png" />
+    <Content Include="img\icons\bullet4.png" />
+    <Content Include="img\icons\bullet5.png" />
+    <Content Include="img\icons\bullet6.png" />
+    <Content Include="img\icons\bullet7.png" />
+    <Content Include="img\icons\bullet9.png" />
+    <Content Include="img\icons\comment.png" />
+    <Content Include="img\icons\glyphicons-halflings-white.png" />
+    <Content Include="img\icons\glyphicons-halflings.png" />
+    <Content Include="img\icons\mag.png" />
+    <Content Include="img\icons\menu-arrow.png" />
+    <Content Include="img\icons\news.png" />
+    <Content Include="img\icons\ok.png" />
+    <Content Include="img\icons\phone.png" />
+    <Content Include="img\icons\point.png" />
+    <Content Include="img\icons\quote.png" />
+    <Content Include="img\icons\search.png" />
+    <Content Include="img\icons\social-icons.png" />
+    <Content Include="img\icons\social.png" />
+    <Content Include="img\icons\submenu-arrow.png" />
+    <Content Include="img\icons\user.png" />
+    <Content Include="img\index.html" />
+    <Content Include="img\jqueryReject\background_browser.gif" />
+    <Content Include="img\jqueryReject\browser_chrome.gif" />
+    <Content Include="img\jqueryReject\browser_firefox.gif" />
+    <Content Include="img\jqueryReject\browser_gcf.gif" />
+    <Content Include="img\jqueryReject\browser_konqueror.gif" />
+    <Content Include="img\jqueryReject\browser_msie.gif" />
+    <Content Include="img\jqueryReject\browser_opera.gif" />
+    <Content Include="img\jqueryReject\browser_safari.gif" />
+    <Content Include="img\jReject\background_browser.gif" />
+    <Content Include="img\jReject\browser_chrome.gif" />
+    <Content Include="img\jReject\browser_firefox.gif" />
+    <Content Include="img\jReject\browser_gcf.gif" />
+    <Content Include="img\jReject\browser_konqueror.gif" />
+    <Content Include="img\jReject\browser_msie.gif" />
+    <Content Include="img\jReject\browser_opera.gif" />
+    <Content Include="img\jReject\browser_safari.gif" />
+    <Content Include="img\nav-separator.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\separator1.png" />
+    <Content Include="img\separator2.png" />
+    <Content Include="img\separator3.png" />
+    <Content Include="img\shadow.png" />
+    <Content Include="img\shadow2.png" />
+    <Content Include="img\slider-arrows.png" />
+    <Content Include="img\slider-arrows2.png" />
+    <Content Include="img\slider-arrows3.png" />
+    <Content Include="img\slider-buttons.png" />
+    <Content Include="img\slider-caption.png" />
+    <Content Include="img\slider-line-active.png" />
+    <Content Include="img\slider-line-value.png" />
+    <Content Include="img\slider-line.png" />
+    <Content Include="img\subline.png" />
+    <Content Include="img\tag-big.png" />
+    <Content Include="img\title.png" />
+    <Content Include="img\unistar-logo.png" />
     <Content Include="license-agreements\EULA.txt" />
     <Content Include="license-agreements\third-party\licenses.txt" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="license-agreements\EULA.rtf" />
     <Content Include="license-agreements\EULA.pdf" />
-    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
-    <Content Include="Scripts\jquery-2.0.3.js" />
-    <Content Include="Scripts\jquery-2.0.3.min.js" />
-    <Content Include="Scripts\jquery-2.0.3.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.signalR-2.0.1.js" />
-    <Content Include="Scripts\jquery.signalR-2.0.1.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\html5shiv.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-2.1.0.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <Content Include="Scripts\jquery-ui-1.10.3.js" />
+    <Content Include="Scripts\jquery.BlackAndWhite.js" />
+    <Content Include="Scripts\jquery.color-2.1.2.js" />
+    <Content Include="Scripts\jquery.color-2.1.2.min.js" />
+    <Content Include="Scripts\jquery.color.svg-names-2.1.2.js" />
+    <Content Include="Scripts\jquery.color.svg-names-2.1.2.min.js" />
+    <Content Include="Scripts\jquery.nivo.slider.pack.js" />
+    <Content Include="Scripts\jquery.nivo.slider.settings.js" />
+    <Content Include="Scripts\jquery.reject.js" />
+    <Content Include="Scripts\jquery.signalR-2.0.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.0.2.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
-    <None Include="Scripts\kendo.web-vsdoc.js" />
-    <None Include="Scripts\kendo.web.min.intellisense.js" />
-    <None Include="Scripts\kendo.dataviz-vsdoc.js" />
-    <None Include="Scripts\kendo.dataviz.min.intellisense.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\kendo\2013.1.514\cultures\kendo.culture.af-ZA.min.js" />
@@ -780,10 +921,12 @@
     <Content Include="Scripts\kendo\2013.1.514\kendo.view.min.js" />
     <Content Include="Scripts\kendo\2013.1.514\kendo.web.min.js" />
     <Content Include="Scripts\kendo\2013.1.514\kendo.window.min.js" />
+    <Content Include="Scripts\Mobile_Detect.php" />
     <Content Include="Scripts\modernizr-2.7.1.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="Scripts\template.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -808,6 +951,8 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutOld.cshtml" />
+    <Content Include="Views\Home\Chat.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -818,6 +963,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\kendo.dataviz-vsdoc.js" />
+    <None Include="Scripts\kendo.dataviz.min.intellisense.js" />
+    <None Include="Scripts\kendo.web-vsdoc.js" />
+    <None Include="Scripts\kendo.web.min.intellisense.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

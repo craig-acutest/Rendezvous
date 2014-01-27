@@ -1,39 +1,135 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="UTF-8">
+    <title>Unistar Design Template</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="author" content="" />
 
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- CSS Files -->
+    <link href="/content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/content/nivo-slider.css" rel="stylesheet" media="screen" />
+    <link href="/content/fonts.css" rel="stylesheet" media="screen" />
+    <link href="/content/general.css" rel="stylesheet" media="screen" />
+    <link href="/content/content.css" rel="stylesheet" media="screen" />
+    <link href="/content/responsive.css" rel="stylesheet" media="screen" />
+
+    <!-- JS Files -->
+    <script src="/scripts/jquery-1.9.1.js"></script> <!-- jQuery Library -->
+    <script src="/scripts/bootstrap.min.js"></script> <!-- Bootstrap Framework -->
+    <script src="/scripts/jquery.reject.js"></script> <!-- jQuery Brower Rejection -->
+    <script src="/scripts/jquery.BlackAndWhite.js"></script> <!-- jQuery Black and White Images -->
+    <script src="/scripts/jquery.nivo.slider.pack.js"></script> <!-- Nivo Slider jQuery Plugin -->
+    <script src="/scripts/jquery.nivo.slider.settings.js"></script> <!-- Nivo Slider jQuery Plugin Settings -->
+    <script src="/scripts/template.js"></script> <!-- UNISTAR Template javascript -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/scripts/html5shiv.js"></script>
+    <script src="/scripts/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+    <div id="body">
+        <header id="header" class="container">
+            <ul class="contact">
+                <li><span>+421-999-123-456</span></li>
+                <li><a href="mailto:info@univeraslipsum.com">info@univeraslipsum.com</a></li>
+            </ul>
+
+            <div class="logo"><a title="" href="index.html"><img src="/img/unistar-logo.png" alt="" /></a></div>
+
+            <div id="topmenu" class="clear">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="services.html" class="dropdown-toggle">Services<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="first"><a href="services.html">Lorem ipsum dolores</a></li>
+                                    <li><a href="services.html">Vestibulum how many years?</a></li>
+                                    <li><a href="services.html">Dolor aspen malaronov</a></li>
+                                    <li><a href="services.html">Shipping prices</a></li>
+                                    <li><a href="services.html">Lorem ipsum dolor yeah</a></li>
+                                </ul>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="fright lang">
+                        <li><a class="active" href="#">EN</a></li>
+                        <li><a href="#">DE</a></li>
+                        <li><a href="#">SK</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+        </header>
+
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+        <footer id="footer-wide">
+            <div id="footer" class="container">
+                <div class="">
+                    <div class="box1 pull-left-sm first">
+                        <div class="header">Subscribe to newsletter</div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur Fusce
+                            nec mauris velit. Mauris ut augue nisl,nisi sit amet
+                            convallis. Curabitur ornare vulputaonec adipiscing
+                        </p>
+                        <form id="newsletter" action="index.html" method="get">
+                            <input class="query" type="text" value="Enter your email address" onfocus="if($(this).val()=='Enter your email address'){$(this).val('');}" onblur="if($(this).val()==''){$(this).val('Enter your email address');}">
+                            <input class="button" type="submit" value="ok" name="">
+                        </form>
+                    </div>
+
+                    <div class="box2 pull-left-sm">
+                        <div class="header">Contact Us</div>
+                        <ul>
+                            <li><img src="/img/icons/user.png" alt="" />Contact Person - Peter Kincel</li>
+                            <li><img src="/img/icons/point.png" alt="" />Address 10, Banov 941 01, Slovakia</li>
+                            <li><img src="/img/icons/phone.png" alt="" />+421-999-123-456</li>
+                            <li><img src="/img/icons/address.png" alt="" /><a href="#">information@universaldesign.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="box3 pull-left-sm last">
+                        <div class="header">Stay connected</div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur vestibilu
+                            Fusce nec mauris velit. Mauris ut augue ni lorem
+                            etna onisi sit amet convallis. Curabitur ornare.
+                        </p>
+                        <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+                            <a class="addthis_button_facebook"><span><span></span></span></a>
+                            <a class="addthis_button_email"><span><span></span></span></a>
+                            <a class="addthis_button_twitter"><span><span></span></span></a>
+                            <a class="addthis_button_google_plusone_share"><span><span></span></span></a>
+                            <a class="addthis_button_in"><span><span></span></span></a>
+                            <a class="addthis_button_rss"><span><span></span></span></a>
+                            <a class="addthis_button_compact"><span><span></span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
