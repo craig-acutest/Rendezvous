@@ -31,5 +31,16 @@ namespace Rendezvous.Controllers
         {
             return View();
         }
+
+        public ActionResult Services()
+        {
+            return View();
+        }
+
+
+        public ActionResult Portfolio()
+        {
+            return View();
+        }
     }
 }

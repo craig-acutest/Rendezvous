@@ -1,7 +1,7 @@
 $(document).ready(function() {
     "use strict";
 
-    <!-- HTML5 for IE8 -->
+    //<!-- HTML5 for IE8 -->
     document.createElement('header');
     document.createElement('nav');
     document.createElement('section');
@@ -9,10 +9,10 @@ $(document).ready(function() {
     document.createElement('aside');
     document.createElement('footer');
 
-    <!-- jQuery Brower Rejection -->
+    //<!-- jQuery Brower Rejection -->
     $.reject();
 
-    <!-- Boostrap Carousel -->
+    //<!-- Boostrap Carousel -->
     $('.carousel').carousel();
 
     $('.box').hover(function () {
@@ -23,7 +23,7 @@ $(document).ready(function() {
 $(window).load(function(){
     "use strict";
 
-    <!-- jQuery Black and White Images -->
+    //<!-- jQuery Black and White Images -->
     $('.bwimg').BlackAndWhite({
         responsive:true,
         speed: {
