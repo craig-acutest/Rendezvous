@@ -13,7 +13,7 @@ namespace Rendezvous.Areas.Admin
             return Validate(values["area"]);
         }
 
-        private bool Validate(RouteValueDictionary value)
+        private bool Validate(object p)
         {
             return true;
         }
