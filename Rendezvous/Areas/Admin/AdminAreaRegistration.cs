@@ -18,7 +18,8 @@ namespace Rendezvous.Areas.Admin
                 name: "Admin_default",
                 url: "Admin/{controller}/{action}/{id}",
                 defaults: new { AreaName= "Admin", controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "Rendezvous.Areas.Admin.Controllers" }
+                namespaces: new[] { "Rendezvous.Areas.Admin.Controllers" },
+                constraints: new AdminAreaRouteConstraint()
             );
         }
     }
