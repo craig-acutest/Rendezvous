@@ -425,6 +425,7 @@
     <Content Include="img\gallery\logos\05.jpg" />
     <Content Include="img\gallery\logos\05.png" />
     <Content Include="img\gallery\work.jpg" />
+    <Content Include="img\girls.png" />
     <Content Include="img\icons\01.png" />
     <Content Include="img\icons\02.png" />
     <Content Include="img\icons\03.png" />
@@ -472,6 +473,7 @@
     <Content Include="img\jReject\browser_msie.gif" />
     <Content Include="img\jReject\browser_opera.gif" />
     <Content Include="img\jReject\browser_safari.gif" />
+    <Content Include="img\logo.png" />
     <Content Include="img\nav-separator.png" />
     <Content Include="img\search.png" />
     <Content Include="img\separator1.png" />

@@ -2,12 +2,12 @@
 #body {background: #000 url(../img/bg-top.jpg) repeat center top;}
 
 /****************************************************************** HEADER ******************************************************************/
-#header .logo {float:left;display: inline-block;height: 112px;vertical-align: middle;}
-#header .logo img {max-height: 112px; margin-top: 30px;}
+#header .logo {float:left;display: inline-block;height: 175px;vertical-align: middle;}
+#header .logo img {max-height: 140px; margin-top: 30px;}
 @media (max-width: 468px) {
     #header .logo img {margin: 15px 0;}
 }
-#header .contact {position: relative;top: 35px;right: -10px;float: right;}
+#header .contact {position: relative;top: 10px;right: -10px;float: right;}
 #header .contact li {padding: 0 10px;display: inline;float: left;border-left: 1px solid #cdcdcd;text-transform: uppercase;}
 #header .contact li:first-child {border-left: 0}
 #header .contact li,
